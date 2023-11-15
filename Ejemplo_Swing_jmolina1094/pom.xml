@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ceu.dam.interfaces</groupId>
-	<artifactId>Swing_jmolina1094</artifactId>
+	<artifactId>Ejemplo_Swing_jmolina1094</artifactId>
 	<version>1.0.0</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
