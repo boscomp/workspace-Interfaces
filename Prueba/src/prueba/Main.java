@@ -23,7 +23,7 @@ public class Main {
 		for (int a = 0; a < 3; a++) {
 			System.out.println("Datos de la persona " + (a + 1) + ": " + lista.get(a));
 		}
-		
+			
 		scanner.close();
 	}
 }

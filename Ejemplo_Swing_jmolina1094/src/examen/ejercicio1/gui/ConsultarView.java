@@ -67,7 +67,6 @@ public class ConsultarView extends View {
 
 		table.setModel(model);
 
-
 		ActionListener al = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -91,7 +90,7 @@ public class ConsultarView extends View {
 
 			}
 		};
-	
+
 		btnConsultar.addActionListener(al);
 
 	}
