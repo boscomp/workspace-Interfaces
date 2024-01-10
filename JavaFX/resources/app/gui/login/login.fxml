@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.loguin.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.loguin.LoginController">
    <children>
-      <Button layoutX="265.0" layoutY="299.0" mnemonicParsing="false" onAction="#escribirTexto" text="Aceptar" />
+      <ImageView fitHeight="450.0" fitWidth="606.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Downloads/istockphoto-1358321288-640x640.jpg" />
+         </image>
+      </ImageView>
+      <Button contentDisplay="TOP" layoutX="323.0" layoutY="274.0" mnemonicParsing="false" onAction="#borrarTexto" prefHeight="27.0" prefWidth="62.0" text="Salir" textOverrun="CLIP" />
       <TextField fx:id="tfNombre" layoutX="219.0" layoutY="163.0" />
+      <Button layoutX="194.0" layoutY="275.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="62.0" text="Entrar" />
+      <PasswordField fx:id="passField" layoutX="219.0" layoutY="217.0" />
+      <Label fx:id="labAcceso" alignment="CENTER" contentDisplay="CENTER" layoutX="201.0" layoutY="323.0" prefHeight="17.0" prefWidth="214.0" textFill="#0dff00">
+         <font>
+            <Font name="Book Antiqua Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labNombre" alignment="CENTER" contentDisplay="CENTER" layoutX="149.0" layoutY="356.0" prefHeight="17.0" prefWidth="296.0" />
    </children>
 </AnchorPane>
