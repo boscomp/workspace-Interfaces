@@ -2,8 +2,6 @@ package app.gui.loguin;
 
 import java.text.SimpleDateFormat;
 
-import app.gui.AppController;
-import app.gui.bienvenida.BienvenidaController;
 import app.gui.modelo.Usuario;
 import app.gui.services.LoginDenegadoException;
 import app.gui.services.LoginService;
@@ -13,8 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class LoginController extends AppController{
-	
+public class LoginController {
 	@FXML
 	private TextField tfNombre;
 
@@ -50,14 +47,10 @@ public class LoginController extends AppController{
 		try {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			Usuario u = ls.login(tfNombre.getText(), passField.getText());
-			String nombreUsuario=tfNombre.getText();
 			labAcceso.setText("Acceso correcto");
 			labAcceso.setVisible(true);
 			labAccesoDen.setVisible(false);
 			labNombre.setText(u.getNombre() + " -- " + sdf.format(u.getFechaRegistro()));
-			
-			BienvenidaController controller=(BienvenidaController) cambiarVista(AppController.FXML_BIENVENIDA);
-			controller.setNombreBienvenida(nombreUsuario);
 		} catch (LoginDenegadoException e) {
 			
 			labAccesoDen.setText("Acceso denegado");

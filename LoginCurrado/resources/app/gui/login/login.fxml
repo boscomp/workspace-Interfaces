@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -18,7 +19,10 @@
       </ImageView>
       <TextField fx:id="tfNombre" layoutX="219.0" layoutY="163.0" />
       <PasswordField fx:id="passField" layoutX="219.0" layoutY="217.0" />
-      <Button contentDisplay="TOP" layoutX="188.0" layoutY="274.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="62.0" text="Entrar" textOverrun="CLIP" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="275.0" mnemonicParsing="false" onAction="#login" opacity="0.95" prefHeight="25.0" prefWidth="62.0" text="Entrar">
+         <cursor>
+            <Cursor fx:constant="E_RESIZE" />
+         </cursor></Button>
       <Button contentDisplay="TOP" layoutX="323.0" layoutY="274.0" mnemonicParsing="false" onAction="#salirApp" prefHeight="27.0" prefWidth="62.0" text="Salir" textOverrun="CLIP" />
       <Label fx:id="labAcceso" alignment="CENTER" contentDisplay="CENTER" layoutX="201.0" layoutY="323.0" prefHeight="17.0" prefWidth="214.0" textFill="#0dff00">
          <font>

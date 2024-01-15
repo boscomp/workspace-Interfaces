@@ -9,8 +9,12 @@ public class App extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		AppController appController = new AppController(primaryStage);
-		appController.cambiarVista(AppController.FXML_LOGIN);
+		//1. cargar el fxml
+		FXMLLoader loader= new FXMLLoader(App.class.getResource("/app/gui/bienvenida/bienvenida.fxml"));
+		//creamos la escena
+		Scene scene= new Scene(loader.load());
+		//cargar la escena en el escenario
+		primaryStage.setScene(scene);
 		//mostrar escenario
 		primaryStage.show();
 	}
