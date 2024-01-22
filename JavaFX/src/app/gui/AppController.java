@@ -11,8 +11,10 @@ public class AppController {
 	private static Stage stage;
 	public static final String FXML_LOGIN ="/app/gui/login/login.fxml";
 	public static final String FXML_BIENVENIDA ="/app/gui/bienvenida/bienvenida.fxml";
-	public static final String FXML_PANTALLA1 ="/app/gui/bienvenida/pantalla1.fxml";
-	public static final String FXML_PANTALLA2 ="/app/gui/bienvenida/pantalla2.fxml";
+	public static final String FXML_DATEPICKER ="/app/gui/bienvenida/datepicker.fxml";
+	public static final String FXML_COLORPICKER ="/app/gui/bienvenida/colorpicker.fxml";
+	public static final String FXML_SLIDER ="/app/gui/bienvenida/slider.fxml";
+	public static final String FXML_COMBOBOX ="/app/gui/bienvenida/combobox.fxml";
 	public AppController() {
 
 	}

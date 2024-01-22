@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.bienvenida.ComboBoxController">
+   <children>
+      <ComboBox fx:id="comboBoxNombres" layoutX="242.0" layoutY="131.0" prefHeight="25.0" prefWidth="116.0" />
+      <Button fx:id="btnLimpiar" layoutX="268.0" layoutY="188.0" mnemonicParsing="false" onAction="#limpiarPantalla" text="Limpiar" />
+      <Button fx:id="btnImprimir" layoutX="268.0" layoutY="226.0" mnemonicParsing="false" onAction="#imprimirCombo" text="Imprimir" />
+      <TextField fx:id="textFieldResultado" layoutX="242.0" layoutY="278.0" promptText="resultado..." />
+   </children>
+</AnchorPane>

@@ -56,8 +56,9 @@ public class LoginController extends AppController{
 			labAccesoDen.setVisible(false);
 			labNombre.setText(u.getNombre() + " -- " + sdf.format(u.getFechaRegistro()));
 			
-			BienvenidaController controller=(BienvenidaController) cambiarVista(AppController.FXML_BIENVENIDA);
-			controller.setNombreBienvenida(nombreUsuario);
+//			BienvenidaController controller=(BienvenidaController) cambiarVista(AppController.FXML_BIENVENIDA);
+//			controller.setNombreBienvenida(nombreUsuario);
+			cambiarVista(AppController.FXML_BIENVENIDA);
 		} catch (LoginDenegadoException e) {
 			
 			labAccesoDen.setText("Acceso denegado");

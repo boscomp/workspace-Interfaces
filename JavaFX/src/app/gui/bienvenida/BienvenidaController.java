@@ -1,8 +1,13 @@
 package app.gui.bienvenida;
 
+import java.util.Optional;
+
 import app.gui.AppController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 
@@ -16,19 +21,48 @@ public class BienvenidaController extends AppController{
     private BorderPane panel;
 
     @FXML
-    void irPantalla1(ActionEvent event) {
-    	panel.setCenter(cargarVista(FXML_PANTALLA1));
+    void irColorPicker(ActionEvent event) {
+    	panel.setCenter(cargarVista(FXML_COLORPICKER));
+    	
     }
 
     @FXML
-    void irPantalla2(ActionEvent event) {
-    	panel.setCenter(cargarVista(FXML_PANTALLA2));
+    void irComboBox(ActionEvent event) {
+
+    	panel.setCenter(cargarVista(AppController.FXML_COMBOBOX));
+//		controller.setNombreBienvenida(nombreUsuario);
+    }
+
+    @FXML
+    void irDatePicker(ActionEvent event) {
+    	panel.setCenter(cargarVista(AppController.FXML_DATEPICKER));
+    }
+
+    @FXML
+    void irLogin(ActionEvent event) {
+    	panel.setCenter(cargarVista(AppController.FXML_LOGIN));
+    }
+
+    @FXML
+    void irSlider(ActionEvent event) {
+    	panel.setCenter(cargarVista(AppController.FXML_SLIDER));
     }
 
     @FXML
     void salir(ActionEvent event) {
-    	cambiarVista(AppController.FXML_LOGIN);
+    	Alert a = new Alert(AlertType.CONFIRMATION);
+    	a.setHeaderText("");
+    	a.setContentText("¿Estás seguro de querer cerrar?");
+    	a.setTitle("Confirmación");
+    	Optional <ButtonType> result=a.showAndWait();
+    	if (result.get()==ButtonType.OK) {
+    		System.exit(0);
+    		
+    	}
+    	
+    	
     }
+    
 	
 	
     
