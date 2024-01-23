@@ -19,8 +19,8 @@ public class ColorPickerController extends AppController{
     private Label lblResultado;
     @FXML
     void aplicarColor(ActionEvent event) {
-    	String color =colorPick.getValue().toString();
-    	System.out.println(color);
+  
+    
 //    	String color1[]=color.split("x");
 //    	lblResultado.setStyle("-fx-text-fill:"+color1[1]);
     	lblResultado.setTextFill(colorPick.getValue());
