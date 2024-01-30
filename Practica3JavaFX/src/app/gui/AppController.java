@@ -1,6 +1,9 @@
 package app.gui;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,20 +12,16 @@ import javafx.stage.Stage;
 
 public class AppController {
 	private static Stage stage;
-	public static final String FXML_LOGIN ="/app/gui/login/login.fxml";
-	public static final String FXML_BIENVENIDA ="/app/gui/bienvenida/bienvenida.fxml";
-	public static final String FXML_DATEPICKER ="/app/gui/bienvenida/datepicker.fxml";
-	public static final String FXML_COLORPICKER ="/app/gui/bienvenida/colorpicker.fxml";
-	public static final String FXML_SLIDER ="/app/gui/bienvenida/slider.fxml";
-	public static final String FXML_COMBOBOX ="/app/gui/bienvenida/combobox.fxml";
-	public static final String FXML_TABLA ="/app/gui/bienvenida/tabla.fxml";
+	public static final String FXML_TABLA ="/app/tabla.fxml";
+	public static final String FXML_TIPO ="/app/tipo.fxml";
 	public AppController() {
-
+		
 	}
-
 	public AppController(Stage primaryStage) {
 		stage = primaryStage;
+		stage.setUserData(new HashMap<String, Object>());
 	}
+
 	
 	public AppController cambiarVista(String fxml) {
 				try {
@@ -58,4 +57,14 @@ public class AppController {
 		}
 }
 
+	public Object getUserDataObject(String key) {
+		@SuppressWarnings("unchecked")
+		Map<String, Object> map = (Map<String, Object>) stage.getUserData();
+		return map.get(key);
+	}
+	public void putUserDataObject(String key, Object data) {
+		@SuppressWarnings("unchecked")
+		Map<String, Object> map = (Map<String, Object>) stage.getUserData();
+		map.put(key, data);
+	}
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.tabla.TablaController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabla" layoutX="104.0" layoutY="100.0" prefHeight="200.0" prefWidth="372.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="colTipo" prefWidth="121.0" text="Tipo" />
+                <TableColumn fx:id="colName" prefWidth="124.0" text="Nombre" />
+                  <TableColumn fx:id="colEdad" minWidth="0.0" prefWidth="112.0" text="Edad" />
+              </columns>
+            </TableView>
+            <TextField fx:id="tfAnimal" layoutX="104.0" layoutY="50.0" />
+            <Button layoutX="309.0" layoutY="50.0" mnemonicParsing="false" onAction="#añadirAnimales" text="Consultar" />
+            <ProgressBar fx:id="progressBar" layoutX="104.0" layoutY="322.0" prefWidth="200.0" progress="0.0" />
+            <Button layoutX="409.0" layoutY="319.0" mnemonicParsing="false" onAction="#nuevoAnimal" text="Nuevo..." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

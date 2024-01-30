@@ -19,6 +19,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#irDatePicker" text="DatePicker" />
                   <MenuItem mnemonicParsing="false" onAction="#irColorPicker" text="ColorPicker" />
                   <MenuItem mnemonicParsing="false" onAction="#irSlider" text="Slider" />
+                  <MenuItem mnemonicParsing="false" onAction="#irTabla" text="Tabla" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="App">
@@ -37,7 +38,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="lbBienvenida" layoutX="202.0" layoutY="20.0" prefHeight="305.0" prefWidth="196.0" text="Elige la opción que prefieras del menú" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="lbBienvenida" layoutX="202.0" layoutY="35.0" prefHeight="305.0" prefWidth="196.0" text="Elige la opción que prefieras del menú" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="36.0" />
                </font></Label>
