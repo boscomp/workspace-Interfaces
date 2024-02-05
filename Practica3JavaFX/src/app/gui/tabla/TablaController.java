@@ -19,6 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.layout.BorderPane;
 
 public class TablaController extends AppController {
@@ -39,6 +40,7 @@ public class TablaController extends AppController {
 	@FXML
 	private TableView<Animal> tabla;
 	 private ObservableList<Animal> datos;
+	 private BoxBlur bb;
 	    
 	    public void initialize() {
 
@@ -48,6 +50,7 @@ public class TablaController extends AppController {
 	    	
 	    	datos = FXCollections.observableArrayList();
 	    	tabla.setItems(datos);
+	    	bb=new BoxBlur();
 	    }
 	@FXML
 	void añadirAnimales(ActionEvent event) {
@@ -55,10 +58,13 @@ public class TablaController extends AppController {
 		Task<Void> task = new Task<Void>() {
 			List<Animal> resultados;
 			AnimalesServices as = new AnimalesServices();
+			
 
 			@Override
 			protected Void call() throws Exception {
 				resultados = as.consultarAnimales(tfAnimal.getText());
+				
+				tabla.setEffect(null);
 				return null;
 			}
 
@@ -66,6 +72,7 @@ public class TablaController extends AppController {
 			protected void succeeded() {
 				datos.setAll(resultados);
 				super.succeeded();
+				updateProgress(100,100);
 			}
 
 			@Override
@@ -76,12 +83,16 @@ public class TablaController extends AppController {
 				a.setHeaderText(null);
 				a.setContentText("No hay registros en la bbdd con ese filtro");
 				a.setTitle("Error");
-				Optional<ButtonType> result = a.showAndWait();
+				a.showAndWait();
+				updateProgress(100,100);
+				tabla.setEffect(null);
 				
 			}
 		};
 		new Thread(task).start();
+		tabla.setEffect(bb);
 		progressBar.progressProperty().bind(task.progressProperty());
+	
 		
 	}
 	
@@ -89,5 +100,9 @@ public class TablaController extends AppController {
     @FXML
     void nuevoAnimal(ActionEvent event) {
     	panel.setCenter(cargarVista(AppController.FXML_TIPO));
+    }
+    
+    public void irANombre() {
+    	panel.setCenter(cargarVista(AppController.FXML_NOMBRE));
     }
 }

@@ -14,6 +14,7 @@ public class AppController {
 	private static Stage stage;
 	public static final String FXML_TABLA ="/app/tabla.fxml";
 	public static final String FXML_TIPO ="/app/tipo.fxml";
+	public static final String FXML_NOMBRE ="/app/nombre.fxml";
 	public AppController() {
 		
 	}
