@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-
+import app.gui.tabla.TablaController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class AppController {
@@ -68,4 +70,13 @@ public class AppController {
 		Map<String, Object> map = (Map<String, Object>) stage.getUserData();
 		map.put(key, data);
 	}
+	public void mostrarAlerta(String mensaje) {
+		Alert a = new Alert(AlertType.ERROR);
+		a.setHeaderText(null);
+		a.setContentText(mensaje);
+		a.setTitle("Error");
+		a.showAndWait();
+		
+	}
+	
 }

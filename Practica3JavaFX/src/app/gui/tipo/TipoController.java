@@ -5,31 +5,36 @@ import app.gui.modelo.Animal;
 import app.gui.tabla.TablaController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
 
-public class TipoController extends AppController{
+public class TipoController extends AppController {
+	@FXML
+	private AnchorPane anPanel;
+	@FXML
+	private TextField tfTipo;
 
-    @FXML
-    private TextField tfTipo;
+	public void initialize() {
+		if ((boolean) getUserDataObject("modoOscuro")) {
+			anPanel.getStylesheets().add("/css/dark-theme.css");
+		} else {
+			anPanel.getStylesheets().clear();
+		}
+	}
 
-    @FXML
-    void continuar(ActionEvent event) {
-    	if (tfTipo.getText().isEmpty()) {
-    		Alert a = new Alert(AlertType.ERROR);
-			a.setHeaderText(null);
-			a.setContentText("El tipo indicado no puede ser vacío");
-			a.setTitle("Error");
-			a.showAndWait();
-    	}
-    	else {
-    	Animal a = new Animal();
-    	a.setTipo(tfTipo.getText());
-    	putUserDataObject(tfTipo.getText(), a);
-    	TablaController tc = new TablaController();
-    	tc.irANombre();
-    	}
-    }
+	@FXML
+	void continuar(ActionEvent event) {
+		System.out.println("hola2");
+		if (tfTipo.getText().isEmpty()) {
+			mostrarAlerta("El tipo indicado no puede ser vacío");
+		} else {
+			Animal a = new Animal();
+			a.setTipo(tfTipo.getText());
+			putUserDataObject("animalCreado", a);
+			cambiarVista(FXML_NOMBRE);
+
+		}
+	}
 
 }
