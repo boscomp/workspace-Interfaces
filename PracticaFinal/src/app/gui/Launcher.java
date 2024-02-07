@@ -28,6 +28,7 @@ public class Launcher {
 			//Al hacer la búsqueda de nuevo cada vez que pasa por el cursor, puedo imprimir lo que quiero
 			//no lo siguiente a lo que quiero
 	
+			//LO PUEDO PASAR A CLASE PARTIDO Y DARSELO A TABLA
 			FindIterable<Document> resultado = col.find(filtro).skip(i);
 			if (cursor.next().get("AwayTeam").equals("Mallorca")) {
 				
