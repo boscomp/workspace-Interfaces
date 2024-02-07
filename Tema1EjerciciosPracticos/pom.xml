@@ -20,8 +20,8 @@
 	<dependencies>
 		<dependency> 
 			<groupId>Tema1</groupId>
-			<artifactId>Tema1</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+	<artifactId>Tema1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 		</dependency>
   	</dependencies>
 </project>
