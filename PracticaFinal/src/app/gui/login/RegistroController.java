@@ -19,6 +19,6 @@ public class RegistroController extends AppController{
 
     @FXML
     void continuar(ActionEvent event) {
-    	cambiarVista(FXML_TABLA);
+    	cambiarVista(FXML_FAVS);
     }
 }

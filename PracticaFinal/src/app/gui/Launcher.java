@@ -14,30 +14,11 @@ import app.mongo.MongoSession;
 
 public class Launcher {
 	public static void main(String[] args) {
-	//	App.main(args);
-		
-		MongoClient mc = MongoSession.getMongoClient();
-		MongoDatabase db = mc.getDatabase("futbol");
-		MongoCollection<Document> col = db.getCollection("partidos");
-		Bson filtro = Filters.regex("HomeTeam", ".*Val.*");
-		FindIterable<Document> result = col.find(filtro);
-		MongoCursor<Document> cursor = result.cursor();
-		int i=0;
-		while (cursor.hasNext()) {
-			
-			//Al hacer la búsqueda de nuevo cada vez que pasa por el cursor, puedo imprimir lo que quiero
-			//no lo siguiente a lo que quiero
-	
-			//LO PUEDO PASAR A CLASE PARTIDO Y DARSELO A TABLA
-			FindIterable<Document> resultado = col.find(filtro).skip(i);
-			if (cursor.next().get("AwayTeam").equals("Mallorca")) {
-				
-				System.out.println("Temporada: "+resultado.first().get("Season")+". Local: "+resultado.first().get("HomeTeam")+". Visitante: "+resultado.first().get("AwayTeam"));
-				
-			}
-			i++;
-		}
-//		System.out.println(result.first().get("AwayTeam"));
-		
+		App.main(args);
+
+//		Bson filtro =Filters.and(Filters.regex("HomeTeam", ".*Val.*"), Filters.eq("AwayTeam", "Real Betis"), Filters.eq("Season", "2019/2020"));
+		// Bson filtro =Filters.and(Filters.regex("HomeTeam", ".*Val.*"),
+		// Filters.eq("AwayTeam", "Real Betis"), Filters.gt("AR", 0));
+
 	}
 }

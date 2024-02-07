@@ -1,9 +1,26 @@
 package app.gui;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 
+import org.bson.Document;
+import org.bson.conversions.Bson;
+
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+
+import app.gui.modelo.Partido;
+import app.mongo.MongoSession;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,6 +34,7 @@ public class AppController {
 	public static final String FXML_LOGIN = "/app/gui/login/login.fxml";
 	public static final String FXML_REGISTRO = "/app/gui/login/registro.fxml";
 	public static final String FXML_TABLA = "/app/gui/tabla/tabla.fxml";
+	public static final String FXML_FAVS = "/app/gui/login/favoritos.fxml";
 
 	public AppController() {
 
@@ -81,4 +99,6 @@ public class AppController {
 		a.showAndWait();
 
 	}
+	
+	
 }

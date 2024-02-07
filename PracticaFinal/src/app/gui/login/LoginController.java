@@ -22,7 +22,7 @@ public class LoginController extends AppController {
 	    private Label lblRegistro;
 	    @FXML
 	    void entrar(ActionEvent event) {
-
+	    	cambiarVista(FXML_FAVS);
 	    }
 	   
 	    @FXML
@@ -30,5 +30,6 @@ public class LoginController extends AppController {
 	    	
 	    	cambiarVista(FXML_REGISTRO);
 	    }
+	    
 
 }

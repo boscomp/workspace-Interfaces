@@ -15,10 +15,10 @@ public class MongoSession {
 	private static String USER = "ceuadmin";
 	private static String PASS = "ceuadmin";
 	private static String SERVER = "cluster0.fafezuh.mongodb.net";
-	private static String DATABASE = "appInterface";
+	private static String DATABASE = "futbol";
 	private static MongoDatabase database;
-
-	public static MongoClient getMongoClient() {
+	public static MongoDatabase getDatabase() {
+//	public static MongoClient getMongoClient() {
 		String connectionString = "mongodb+srv://"+USER+":"+PASS+"@" + SERVER + "/?retryWrites=true&w=majority";
 		ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();
 		MongoClientSettings settings = MongoClientSettings.builder()
@@ -27,10 +27,11 @@ public class MongoSession {
 		MongoClient mongoClient = MongoClients.create(settings);
 
 		// Send a ping to confirm a successful connection
-		database = mongoClient.getDatabase("admin");
+		database = mongoClient.getDatabase(DATABASE);
 		database.runCommand(new Document("ping", 1));
 		System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
-		return mongoClient;
+//		return mongoClient;
+		return database;
 	}
 	
 }
