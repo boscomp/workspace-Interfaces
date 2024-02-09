@@ -1,110 +1,134 @@
 package app.gui.modelo;
 
 public class Partido {
-	private String season;
-	private String fecha;
-	private String hora;
-	private String local;
-	private String visitante;
-	private Integer golesLocal;
-	private Integer golesVisitante;
-	private String ganador;
-	private Integer amarillasLocal;
-	private Integer amarillasVisitante;
-	private Integer rojasLocal;
-	private Integer rojasVisitante;
+	private String Season;
+	private String Date;
+	private String Time;
+	private String HomeTeam;
+	private String AwayTeam;
+	private Integer FTHG;
+	private Integer FTAG;
+	private String FTR;
+	private Integer HY;
+	private Integer AY;
+	private Integer HR;
+	private Integer AR;
+
 	public Partido() {
-		
+
 	}
-	public Partido(String season, String fecha, String hora, String local, String visitante, Integer golesLocal,
-			Integer golesVisitante, String ganador, Integer amarillasLocal, Integer amarillasVisitante,
-			Integer rojasLocal, Integer rojasVisitante) {
+
+	public Partido(String season, String date, String time, String homeTeam, String awayTeam, Integer fTHG,
+			Integer fTAG, String fTR, Integer hY, Integer aY, Integer hR, Integer aR) {
 		super();
-		this.season = season;
-		this.fecha = fecha;
-		this.hora = hora;
-		this.local = local;
-		this.visitante = visitante;
-		this.golesLocal = golesLocal;
-		this.golesVisitante = golesVisitante;
-		this.ganador = ganador;
-		this.amarillasLocal = amarillasLocal;
-		this.amarillasVisitante = amarillasVisitante;
-		this.rojasLocal = rojasLocal;
-		this.rojasVisitante = rojasVisitante;
+		Season = season;
+		Date = date;
+		Time = time;
+		HomeTeam = homeTeam;
+		AwayTeam = awayTeam;
+		FTHG = fTHG;
+		FTAG = fTAG;
+		FTR = fTR;
+		HY = hY;
+		AY = aY;
+		HR = hR;
+		AR = aR;
 	}
+
 	public String getSeason() {
-		return season;
+		return Season;
 	}
+
 	public void setSeason(String season) {
-		this.season = season;
+		Season = season;
 	}
-	public String getFecha() {
-		return fecha;
+
+	public String getDate() {
+		return Date;
 	}
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
+
+	public void setDate(String date) {
+		Date = date;
 	}
-	public String getHora() {
-		return hora;
+
+	public String getTime() {
+		return Time;
 	}
-	public void setHora(String hora) {
-		this.hora = hora;
+
+	public void setTime(String time) {
+		Time = time;
 	}
-	public String getLocal() {
-		return local;
+
+	public String getHomeTeam() {
+		return HomeTeam;
 	}
-	public void setLocal(String local) {
-		this.local = local;
+
+	public void setHomeTeam(String homeTeam) {
+		HomeTeam = homeTeam;
 	}
-	public String getVisitante() {
-		return visitante;
+
+	public String getAwayTeam() {
+		return AwayTeam;
 	}
-	public void setVisitante(String visitante) {
-		this.visitante = visitante;
+
+	public void setAwayTeam(String awayTeam) {
+		AwayTeam = awayTeam;
 	}
-	public Integer getGolesLocal() {
-		return golesLocal;
+
+	public Integer getFTHG() {
+		return FTHG;
 	}
-	public void setGolesLocal(Integer golesLocal) {
-		this.golesLocal = golesLocal;
+
+	public void setFTHG(Integer fTHG) {
+		FTHG = fTHG;
 	}
-	public Integer getGolesVisitante() {
-		return golesVisitante;
+
+	public Integer getFTAG() {
+		return FTAG;
 	}
-	public void setGolesVisitante(Integer golesVisitante) {
-		this.golesVisitante = golesVisitante;
+
+	public void setFTAG(Integer fTAG) {
+		FTAG = fTAG;
 	}
-	public String getGanador() {
-		return ganador;
+
+	public String getFTR() {
+		return FTR;
 	}
-	public void setGanador(String ganador) {
-		this.ganador = ganador;
+
+	public void setFTR(String fTR) {
+		FTR = fTR;
 	}
-	public Integer getAmarillasLocal() {
-		return amarillasLocal;
+
+	public Integer getHY() {
+		return HY;
 	}
-	public void setAmarillasLocal(Integer amarillasLocal) {
-		this.amarillasLocal = amarillasLocal;
+
+	public void setHY(Integer hY) {
+		HY = hY;
 	}
-	public Integer getAmarillasVisitante() {
-		return amarillasVisitante;
+
+	public Integer getAY() {
+		return AY;
 	}
-	public void setAmarillasVisitante(Integer amarillasVisitante) {
-		this.amarillasVisitante = amarillasVisitante;
+
+	public void setAY(Integer aY) {
+		AY = aY;
 	}
-	public Integer getRojasLocal() {
-		return rojasLocal;
+
+	public Integer getHR() {
+		return HR;
 	}
-	public void setRojasLocal(Integer rojasLocal) {
-		this.rojasLocal = rojasLocal;
+
+	public void setHR(Integer hR) {
+		HR = hR;
 	}
-	public Integer getRojasVisitante() {
-		return rojasVisitante;
+
+	public Integer getAR() {
+		return AR;
 	}
-	public void setRojasVisitante(Integer rojasVisitante) {
-		this.rojasVisitante = rojasVisitante;
+
+	public void setAR(Integer aR) {
+		AR = aR;
 	}
-	
-	
+
 }

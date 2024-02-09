@@ -33,9 +33,9 @@ public class TablaController extends AppController {
 	
 	public void initialize() {
 
-		colTemp.setCellValueFactory(new PropertyValueFactory<Partido, String>("Season"));
-		colLocal.setCellValueFactory(new PropertyValueFactory<Partido, String>("HomeTeam"));
-		colVisitante.setCellValueFactory(new PropertyValueFactory<Partido, String>("AwayTeam"));
+		colTemp.setCellValueFactory(new PropertyValueFactory<Partido, String>("temporada"));
+		colLocal.setCellValueFactory(new PropertyValueFactory<Partido, String>("local"));
+		colVisitante.setCellValueFactory(new PropertyValueFactory<Partido, String>("visitante"));
 	}
 	@FXML
 	void consultar(ActionEvent event) {
@@ -47,7 +47,7 @@ public class TablaController extends AppController {
 			@Override
 			protected Void call() throws Exception {
 
-				resultados = ps.partidosBetis();
+				resultados = ps.obtenerListaPartidos();
 
 				tablaResultados.setEffect(null);
 				return null;
@@ -64,7 +64,7 @@ public class TablaController extends AppController {
 
 			@Override
 			protected void failed() {
-				datos.clear();
+//				datos.clear();
 				super.failed();
 				mostrarAlerta("No hay registros en la bbdd con ese filtro");
 				updateProgress(100, 100);
