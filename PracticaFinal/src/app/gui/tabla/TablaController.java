@@ -9,6 +9,7 @@ import com.mongodb.client.MongoCursor;
 import app.gui.AppController;
 import app.gui.modelo.Partido;
 import app.gui.services.PartidosServices;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -33,9 +34,13 @@ public class TablaController extends AppController {
 	
 	public void initialize() {
 
-		colTemp.setCellValueFactory(new PropertyValueFactory<Partido, String>("temporada"));
-		colLocal.setCellValueFactory(new PropertyValueFactory<Partido, String>("local"));
-		colVisitante.setCellValueFactory(new PropertyValueFactory<Partido, String>("visitante"));
+
+		colTemp.setCellValueFactory(new PropertyValueFactory<Partido, String>("Season"));
+		colLocal.setCellValueFactory(new PropertyValueFactory<Partido, String>("HomeTeam"));
+		colVisitante.setCellValueFactory(new PropertyValueFactory<Partido, String>("AwayTeam"));
+		datos=FXCollections.observableArrayList();
+		tablaResultados.setItems(datos);
+
 	}
 	@FXML
 	void consultar(ActionEvent event) {

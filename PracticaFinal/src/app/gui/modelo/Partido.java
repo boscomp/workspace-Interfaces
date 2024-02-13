@@ -43,6 +43,7 @@ public class Partido {
 		Season = season;
 	}
 
+
 	public String getDate() {
 		return Date;
 	}
