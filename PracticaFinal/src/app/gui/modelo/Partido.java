@@ -1,17 +1,31 @@
 package app.gui.modelo;
 
+import org.bson.codecs.pojo.annotations.BsonProperty;
+
 public class Partido {
+	@BsonProperty(value="Season")
 	private String Season;
+	@BsonProperty(value="Date")
 	private String Date;
+	@BsonProperty(value="Time")
 	private String Time;
+	@BsonProperty(value="HomeTeam")
 	private String HomeTeam;
+	@BsonProperty(value="AwayTeam")
 	private String AwayTeam;
+	@BsonProperty(value="FTHG")
 	private Integer FTHG;
+	@BsonProperty(value="FTAG")
 	private Integer FTAG;
+	@BsonProperty(value="FTR")
 	private String FTR;
+	@BsonProperty(value="HY")
 	private Integer HY;
+	@BsonProperty(value="AY")
 	private Integer AY;
+	@BsonProperty(value="HR")
 	private Integer HR;
+	@BsonProperty(value="AR")
 	private Integer AR;
 
 	public Partido() {
