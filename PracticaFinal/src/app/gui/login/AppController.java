@@ -1,4 +1,4 @@
-package app.gui;
+package app.gui.login;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,6 +19,7 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 
+import app.gui.App;
 import app.gui.modelo.Partido;
 import app.mongo.MongoSession;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +34,7 @@ public class AppController {
 	private static Stage stage;
 	public static final String FXML_LOGIN = "/app/gui/login/login.fxml";
 	public static final String FXML_REGISTRO = "/app/gui/login/registro.fxml";
-	public static final String FXML_TABLA = "/app/gui/tabla/tabla.fxml";
+	public static final String FXML_TABLA = "/app/gui/login/tabla.fxml";
 	public static final String FXML_FAVS = "/app/gui/login/favoritos.fxml";
 
 	public AppController() {

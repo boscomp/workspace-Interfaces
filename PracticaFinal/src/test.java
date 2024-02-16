@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	PartidosServices ps = new PartidosServices();
 	List<Partido> partidos=ps.obtenerListaPartidos();
 	for (Partido partido : partidos) {
-		System.out.println(partido.getAwayTeam());
+		System.out.println(partido.getFecha());
 	}
 }
 }

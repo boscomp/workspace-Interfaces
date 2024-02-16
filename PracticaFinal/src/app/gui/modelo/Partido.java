@@ -3,147 +3,145 @@ package app.gui.modelo;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 
 public class Partido {
-	@BsonProperty(value="Season")
-	private String Season;
-	@BsonProperty(value="Date")
-	private String Date;
-	@BsonProperty(value="Time")
-	private String Time;
-	@BsonProperty(value="HomeTeam")
-	private String HomeTeam;
-	@BsonProperty(value="AwayTeam")
-	private String AwayTeam;
-	@BsonProperty(value="FTHG")
-	private Integer FTHG;
-	@BsonProperty(value="FTAG")
-	private Integer FTAG;
-	@BsonProperty(value="FTR")
-	private String FTR;
-	@BsonProperty(value="HY")
-	private Integer HY;
-	@BsonProperty(value="AY")
-	private Integer AY;
-	@BsonProperty(value="HR")
-	private Integer HR;
-	@BsonProperty(value="AR")
-	private Integer AR;
+
+	private String temporada;
+	private String fecha;
+	private String hora;
+	private String local;
+	private String visitante;
+	private Integer golesLocal;
+	private Integer golesVisitante;
+	private String ganador;
+	private Integer amarillasLocal;
+	private Integer amarillasVisitante;
+	private Integer rojasLocal;
+	private Integer rojasVisitante;
 
 	public Partido() {
 
 	}
 
-	public Partido(String season, String date, String time, String homeTeam, String awayTeam, Integer fTHG,
-			Integer fTAG, String fTR, Integer hY, Integer aY, Integer hR, Integer aR) {
+	public Partido(String temporada, String fecha, String hora, String local, String visitante, Integer golesLocal,
+			Integer golesVisitante, String ganador, Integer amarillasLocal, Integer amarillasVisitante,
+			Integer rojasLocal, Integer rojasVisitante) {
 		super();
-		Season = season;
-		Date = date;
-		Time = time;
-		HomeTeam = homeTeam;
-		AwayTeam = awayTeam;
-		FTHG = fTHG;
-		FTAG = fTAG;
-		FTR = fTR;
-		HY = hY;
-		AY = aY;
-		HR = hR;
-		AR = aR;
+		this.temporada = temporada;
+		this.fecha = fecha;
+		this.hora = hora;
+		this.local = local;
+		this.visitante = visitante;
+		this.golesLocal = golesLocal;
+		this.golesVisitante = golesVisitante;
+		this.ganador = ganador;
+		this.amarillasLocal = amarillasLocal;
+		this.amarillasVisitante = amarillasVisitante;
+		this.rojasLocal = rojasLocal;
+		this.rojasVisitante = rojasVisitante;
 	}
 
-	public String getSeason() {
-		return Season;
+	public String getTemporada() {
+		return temporada;
 	}
 
-	public void setSeason(String season) {
-		Season = season;
+	public void setTemporada(String temporada) {
+		this.temporada = temporada;
 	}
 
-
-	public String getDate() {
-		return Date;
+	public String getFecha() {
+		return fecha;
 	}
 
-	public void setDate(String date) {
-		Date = date;
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
 	}
 
-	public String getTime() {
-		return Time;
+	public String getHora() {
+		return hora;
 	}
 
-	public void setTime(String time) {
-		Time = time;
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 
-	public String getHomeTeam() {
-		return HomeTeam;
+	public String getLocal() {
+		return local;
 	}
 
-	public void setHomeTeam(String homeTeam) {
-		HomeTeam = homeTeam;
+	public void setLocal(String local) {
+		this.local = local;
 	}
 
-	public String getAwayTeam() {
-		return AwayTeam;
+	public String getVisitante() {
+		return visitante;
 	}
 
-	public void setAwayTeam(String awayTeam) {
-		AwayTeam = awayTeam;
+	public void setVisitante(String visitante) {
+		this.visitante = visitante;
 	}
 
-	public Integer getFTHG() {
-		return FTHG;
+	public Integer getGolesLocal() {
+		return golesLocal;
 	}
 
-	public void setFTHG(Integer fTHG) {
-		FTHG = fTHG;
+	public void setGolesLocal(Integer golesLocal) {
+		this.golesLocal = golesLocal;
 	}
 
-	public Integer getFTAG() {
-		return FTAG;
+	public Integer getGolesVisitante() {
+		return golesVisitante;
 	}
 
-	public void setFTAG(Integer fTAG) {
-		FTAG = fTAG;
+	public void setGolesVisitante(Integer golesVisitante) {
+		this.golesVisitante = golesVisitante;
 	}
 
-	public String getFTR() {
-		return FTR;
+	public String getGanador() {
+		return ganador;
 	}
 
-	public void setFTR(String fTR) {
-		FTR = fTR;
+	public void setGanador(String ganador) {
+		this.ganador = ganador;
 	}
 
-	public Integer getHY() {
-		return HY;
+	public Integer getAmarillasLocal() {
+		return amarillasLocal;
 	}
 
-	public void setHY(Integer hY) {
-		HY = hY;
+	public void setAmarillasLocal(Integer amarillasLocal) {
+		this.amarillasLocal = amarillasLocal;
 	}
 
-	public Integer getAY() {
-		return AY;
+	public Integer getAmarillasVisitante() {
+		return amarillasVisitante;
 	}
 
-	public void setAY(Integer aY) {
-		AY = aY;
+	public void setAmarillasVisitante(Integer amarillasVisitante) {
+		this.amarillasVisitante = amarillasVisitante;
 	}
 
-	public Integer getHR() {
-		return HR;
+	public Integer getRojasLocal() {
+		return rojasLocal;
 	}
 
-	public void setHR(Integer hR) {
-		HR = hR;
+	public void setRojasLocal(Integer rojasLocal) {
+		this.rojasLocal = rojasLocal;
 	}
 
-	public Integer getAR() {
-		return AR;
+	public Integer getRojasVisitante() {
+		return rojasVisitante;
 	}
 
-	public void setAR(Integer aR) {
-		AR = aR;
+	public void setRojasVisitante(Integer rojasVisitante) {
+		this.rojasVisitante = rojasVisitante;
 	}
 
+	@Override
+	public String toString() {
+		return "Partido [temporada=" + temporada + ", fecha=" + fecha + ", hora=" + hora + ", local=" + local
+				+ ", visitante=" + visitante + ", golesLocal=" + golesLocal + ", golesVisitante=" + golesVisitante
+				+ ", ganador=" + ganador + ", amarillasLocal=" + amarillasLocal + ", amarillasVisitante="
+				+ amarillasVisitante + ", rojasLocal=" + rojasLocal + ", rojasVisitante=" + rojasVisitante + "]";
+	}
+
+	
 }

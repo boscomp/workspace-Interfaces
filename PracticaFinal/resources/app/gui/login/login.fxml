@@ -9,17 +9,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.login.LoginController">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="110.0" layoutY="139.0" text="Nombre" />
-            <Label layoutX="102.0" layoutY="175.0" text="Contraseña" />
-            <PasswordField fx:id="pfPass" layoutX="227.0" layoutY="163.0" />
-            <TextField fx:id="tfNombre" layoutX="226.0" layoutY="127.0" />
-            <Button layoutX="277.0" layoutY="212.0" mnemonicParsing="false" onAction="#entrar" text="Entrar" />
-            <Label fx:id="lblRegistro" layoutX="222.0" layoutY="261.0" onMouseClicked="#irARegistro" text="¿No tienes cuenta? Regístrate" underline="true" />
+            <Label layoutX="98.0" layoutY="135.0" text="Nombre" />
+            <Label layoutX="90.0" layoutY="171.0" text="Contraseña" />
+            <TextField fx:id="tfNombre" layoutX="214.0" layoutY="131.0" />
+            <PasswordField fx:id="pfPass" layoutX="214.0" layoutY="167.0" />
+            <Button layoutX="261.0" layoutY="229.0" mnemonicParsing="false" onAction="#entrar" text="Entrar" />
+            <Label fx:id="lblRegistro" layoutX="207.0" layoutY="272.0" onMouseClicked="#irARegistro" text="¿No tienes cuenta? Regístrate" underline="true" />
             <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
               <menus>
                 <Menu mnemonicParsing="false" text="App">
@@ -35,6 +36,11 @@
                 </Menu>
               </menus>
             </MenuBar>
+            <Label fx:id="lblError" layoutX="214.0" layoutY="200.0" textFill="#f80202">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </center>

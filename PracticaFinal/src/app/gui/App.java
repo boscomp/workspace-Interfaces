@@ -1,5 +1,6 @@
 package app.gui;
 
+import app.gui.login.AppController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
